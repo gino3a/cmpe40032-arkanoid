@@ -60,7 +60,7 @@ function PlayState:update(dt)
         if self.ball.x < self.paddle.x + (self.paddle.width / 2) and self.paddle.dx < 0 then
             self.ball.dx = -50 + -(8 * (self.paddle.x + self.paddle.width / 2 - self.ball.x))
 
-            -- else if we hit the paddle on its right side while moving right...
+        -- else if we hit the paddle on its right side while moving right...
         elseif self.ball.x > self.paddle.x + (self.paddle.width / 2) and self.paddle.dx > 0 then
             self.ball.dx = 50 + (8 * math.abs(self.paddle.x + self.paddle.width / 2 - self.ball.x))
         end
